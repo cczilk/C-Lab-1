@@ -46,10 +46,19 @@ struct node *create_list(int length) {
 
 void print_list(struct node *list){
     struct node *curr = list;
-
-    while (curr != NULL) {
-        printf("%d->", curr->data);
+    // Now modify the print_list to only print the node if the data == 5 
+    while(curr){
+        if(curr->data == 5){
+            printf("%d->", curr->data);
+        }
         curr = curr->next;
     }
     printf("X\n");
+
+
+    // while (curr != NULL) {
+    //     printf("%d->", curr->data);
+    //     curr = curr->next;
+    // }
+    // printf("X\n");
 }
